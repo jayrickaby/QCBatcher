@@ -18,5 +18,19 @@
     <ClCompile Include="QCBatcher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="getSMDFiles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="createQCFiles.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="getSMDFiles.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="createQCFiles.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

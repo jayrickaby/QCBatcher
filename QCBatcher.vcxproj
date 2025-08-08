@@ -129,7 +129,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="createQCFiles.cpp" />
+    <ClCompile Include="getSMDFiles.cpp" />
     <ClCompile Include="QCBatcher.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="createQCFiles.h" />
+    <ClInclude Include="getSMDFiles.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
