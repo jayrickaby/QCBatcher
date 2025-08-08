@@ -25,7 +25,7 @@ jobs:
       - name: Zip build output and README
         run: |
           mkdir zip-release
-          copy QCBatcher\x64\Release\QCBatcher.exe zip-release\
+          copy x64\Release\QCBatcher.exe zip-release\
           copy README.md zip-release\
           Compress-Archive -Path zip-release\* -DestinationPath QCBatcher.zip
 
