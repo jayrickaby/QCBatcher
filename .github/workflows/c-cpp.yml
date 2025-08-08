@@ -2,6 +2,8 @@ name: Build with MSBuild
 
 on:
   push:
+    tags:
+      - 'v*'
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
@@ -19,3 +21,17 @@ jobs:
 
       - name: Build the solution
         run: msbuild QCBatcher.sln /p:Configuration=Release
+
+      - name: Zip build output and README
+        run: |
+          mkdir zip-release
+          copy Release\QCBatcher.exe zip-release\
+          copy README.md zip-release\
+          Compress-Archive -Path zip-release\* -DestinationPath QCBatcher.zip
+
+      - name: Upload release asset
+        uses: softprops/action-gh-release@v2
+        with:
+          files: QCBatcher.zip
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
